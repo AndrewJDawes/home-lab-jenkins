@@ -1,0 +1,25 @@
+# casc.yaml
+
+jenkins:
+  systemMessage: "Welcome to Jenkins!\n\n"
+  remotingSecurity:
+    enabled: true
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: ${JENKINS_ADMIN_ID}
+          password: ${JENKINS_ADMIN_PASSWORD}
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+unclassified:
+  location:
+    url: http://127.0.0.1:8080/
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+jobs:
+  - file: /usr/local/SeedJob.groovy
