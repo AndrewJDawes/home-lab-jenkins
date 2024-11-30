@@ -3,7 +3,6 @@ ansicolor
 ant
 antisamy-markup-formatter
 artifact-manager-s3
-aws-credentials
 build-timeout
 cloudbees-folder
 configuration-as-code
@@ -12,7 +11,6 @@ docker-plugin
 docker-workflow
 email-ext
 envinject
-gcp-secrets-manager-credentials-provider
 git
 github-branch-source
 github

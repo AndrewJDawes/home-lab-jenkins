@@ -1,6 +1,6 @@
-freeStyleJob("SeedJob") {
-    description("SeedJob")
-    displayName("SeedJob")
+freeStyleJob("seed-job") {
+    description("Seed Job")
+    displayName("Seed Job")
     scm {
         git {
             remote {
@@ -14,7 +14,7 @@ freeStyleJob("SeedJob") {
         jobDsl {
             removedJobAction("DELETE")
             removedViewAction("DELETE")
-            targets("**/*.groovy")
+            targets("**/folder.groovy\n**/job.groovy")
         }
     }
     triggers {
