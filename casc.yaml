@@ -15,6 +15,11 @@ jenkins:
       permissions:
         - "Overall/Administer:admin"
         - "Overall/Read:authenticated"
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: "JENKINS_SEED_JOB_REPO_URL"
+            value: "${JENKINS_SEED_JOB_REPO_URL}"
 unclassified:
   location:
     url: http://127.0.0.1:8080/

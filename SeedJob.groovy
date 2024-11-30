@@ -5,7 +5,7 @@ freeStyleJob("SeedJob") {
         git {
             remote {
                 // credentials("{{ jenkins_seed_job.github_credentials }}")
-                url("https://github.com/AndrewJDawes/home-lab-jenkins-jobs")
+                url("${JENKINS_SEED_JOB_REPO_URL}")
             }
             branch("*/main")
         }
