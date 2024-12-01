@@ -1,9 +1,7 @@
 # home-lab-jenkins
 
-## TODO
+## Examples
 
--   [ ] Figure out how to get the GitHub App to list private repositories in GitHub. Maybe check permissions?
--   [ ] Move all configuration as code to a separate repo
--   [ ] Provide a NEW entrypoint script that will
-    -   [ ] CURL to download the configuration as code URL (environment variable)
-    -   [ ] Call the existing entrypoint script
+```
+docker run --rm --volume /var/jenkins_home -p 8080:8080 ghcr.io/AndrewJDawes/home-lab-jenkins:latest
+```
