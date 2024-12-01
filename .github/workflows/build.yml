@@ -55,7 +55,7 @@ jobs:
               with:
                   context: .
                   file: ./Dockerfile
-                  target: base
+                  #   target: base
                   push: true
                   tags: ${{ steps.meta.outputs.tags }}
                   platforms: linux/amd64
