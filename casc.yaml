@@ -39,3 +39,10 @@ credentials:
               description: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_ANDREWJDAWES_DESCRIPTION}"
               # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
               privateKey: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_ANDREWJDAWES_PRIVATE_KEY}"
+          - gitHubApp:
+              id: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_ID}"
+              # apiUri: https://my-custom-github-enterprise.com/api/v3 # optional only required for GitHub enterprise
+              appID: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_APP_ID}"
+              description: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_DESCRIPTION}"
+              # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
+              privateKey: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_PRIVATE_KEY}"
