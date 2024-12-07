@@ -62,19 +62,19 @@ credentials:
     domainCredentials:
       - credentials:
           - gitHubApp:
-              id: "jenkins-github-andrewjdawes"
+              id: "github-app-user-andrewjdawes"
               # apiUri: https://my-custom-github-enterprise.com/api/v3 # optional only required for GitHub enterprise
-              appID: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_ANDREWJDAWES_APP_ID}"
+              appID: "${JENKINS_CREDENTIAL_GITHUB_APP_USER_ANDREWJDAWES_APP_ID}"
               description: "GitHub App for AndrewJDawes User"
               # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
-              privateKey: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_ANDREWJDAWES_PRIVATE_KEY}"
+              privateKey: "${JENKINS_CREDENTIAL_GITHUB_APP_USER_ANDREWJDAWES_SSH_KEY_PRIVATE}"
           - gitHubApp:
-              id: "jenkins-github-codekaizen"
+              id: "github-app-organization-codekaizen"
               # apiUri: https://my-custom-github-enterprise.com/api/v3 # optional only required for GitHub enterprise
-              appID: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_APP_ID}"
+              appID: "${JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_CODEKAIZEN_APP_ID}"
               description: "GitHub App for CodeKaizen Organization"
               # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
-              privateKey: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_CODEKAIZEN_PRIVATE_KEY}"
+              privateKey: "${JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_CODEKAIZEN_SSH_KEY_PRIVATE}"
           - basicSSHUserPrivateKey:
               id: "jenkins-controller-to-agents-private-key"
               description: "Jenkins Controller to Agents Private Key"
