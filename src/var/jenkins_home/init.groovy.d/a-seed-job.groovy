@@ -1,3 +1,6 @@
+// Import the Jenkins class
+import jenkins.model.Jenkins
+
 // Define the job name
 def jobName = 'seed-job'
 
