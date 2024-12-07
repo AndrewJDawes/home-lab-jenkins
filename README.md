@@ -8,7 +8,6 @@ docker run --rm --volume /var/jenkins_data -p 8080:8080 ghcr.io/AndrewJDawes/hom
 
 ## TODO
 
--   [ ] Connect Jenkins controller to agent
 -   [ ] Deploy to Portainer
 -   [ ] Possibly, also run the Organization Scans on init. Would have to wait for SeedJob to finish
 -   [ ]
