@@ -7,6 +7,9 @@ freeStyleJob("seed-job") {
                 url("${JENKINS_SEED_JOB_REPO_URL}")
             }
             branch("*/main")
+            extensions {
+                disableRemotePoll()
+            }
         }
     }
     steps {
