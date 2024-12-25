@@ -4,25 +4,32 @@ jenkins:
   numExecutors: 0
   nodes:
     - permanent:
-        launcher:
-          ssh:
-            credentialsId: "jenkins-ssh-key"
-            host: "${JENKINS_AGENT_041484e842cf416e930b322778e11490_IP}"
-            port: 22
-            sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
         name: "041484e842cf416e930b322778e11490"
-        remoteFS: "/var/lib/jenkins"
-        retentionStrategy: "always"
-    - permanent:
         labelString: "041484e842cf416e930b322778e11490 linux docker arm64"
         mode: NORMAL
-        name: "041484e842cf416e930b322778e11490"
         numExecutors: 3
-        remoteFS: "jenkins_home"
+        remoteFS: "${JENKINS_AGENT_HOME}"
         launcher:
           ssh:
             credentialsId: "jenkins-controller-to-agents-private-key"
             host: "${JENKINS_AGENT_041484e842cf416e930b322778e11490_IP}"
+            port: 22
+            launchTimeoutSeconds: 60
+            maxNumRetries: 3
+            retryWaitTime: 30
+            sshHostKeyVerificationStrategy:
+              manuallyTrustedKeyVerificationStrategy:
+                requireInitialManualTrust: false
+    - permanent:
+        name: "52cf9a067da148dfa8badcfd0722a014"
+        labelString: "52cf9a067da148dfa8badcfd0722a014 linux docker amd64"
+        mode: NORMAL
+        numExecutors: 3
+        remoteFS: "${JENKINS_AGENT_HOME}"
+        launcher:
+          ssh:
+            credentialsId: "jenkins-controller-to-agents-private-key"
+            host: "${JENKINS_AGENT_52cf9a067da148dfa8badcfd0722a014_IP}"
             port: 22
             launchTimeoutSeconds: 60
             maxNumRetries: 3
