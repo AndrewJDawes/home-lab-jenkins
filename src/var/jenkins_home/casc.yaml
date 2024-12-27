@@ -104,3 +104,7 @@ credentials:
               id: "jenkins-github-webhook-secret"
               scope: GLOBAL
               secret: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_WEBHOOK_SECRET}"
+          - string:
+              id: "jenkins-github-gchr-pat-token-andrewjdawes"
+              scope: GLOBAL
+              secret: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_GCHR_PAT_TOKEN_ANDREWJDAWES}"
