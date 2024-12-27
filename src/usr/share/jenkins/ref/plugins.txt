@@ -3,6 +3,7 @@ ansicolor
 ant
 antisamy-markup-formatter
 artifact-manager-s3
+basic-branch-build-strategies
 build-timeout
 cloudbees-folder
 configuration-as-code
