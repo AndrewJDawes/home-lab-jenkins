@@ -107,4 +107,4 @@ credentials:
           - string:
               id: "jenkins-github-ghcr-pat-token-andrewjdawes"
               scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_GCHR_PAT_TOKEN_ANDREWJDAWES}"
+              secret: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_GHCR_PAT_TOKEN_ANDREWJDAWES}"
