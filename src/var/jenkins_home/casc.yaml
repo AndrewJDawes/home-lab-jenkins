@@ -9,6 +9,12 @@ jenkins:
         mode: NORMAL
         numExecutors: 3
         remoteFS: "${JENKINS_AGENT_HOME}"
+        nodeProperties:
+          - diskSpaceMonitor:
+              freeDiskSpaceThreshold: "0"
+              freeDiskSpaceWarningThreshold: "2GiB"
+              freeTempSpaceThreshold: "0"
+              freeTempSpaceWarningThreshold: "2GiB"
         launcher:
           ssh:
             credentialsId: "jenkins-controller-to-agents-private-key"
@@ -26,6 +32,12 @@ jenkins:
         mode: NORMAL
         numExecutors: 3
         remoteFS: "${JENKINS_AGENT_HOME}"
+        nodeProperties:
+          - diskSpaceMonitor:
+              freeDiskSpaceThreshold: "0"
+              freeDiskSpaceWarningThreshold: "2GiB"
+              freeTempSpaceThreshold: "0"
+              freeTempSpaceWarningThreshold: "2GiB"
         launcher:
           ssh:
             credentialsId: "jenkins-controller-to-agents-private-key"
