@@ -11,9 +11,9 @@ jenkins:
         remoteFS: "${JENKINS_AGENT_HOME}"
         nodeProperties:
           - diskSpaceMonitor:
-              freeDiskSpaceThreshold: "0"
+              freeDiskSpaceThreshold: "1GiB"
               freeDiskSpaceWarningThreshold: "2GiB"
-              freeTempSpaceThreshold: "0"
+              freeTempSpaceThreshold: "1GiB"
               freeTempSpaceWarningThreshold: "2GiB"
         launcher:
           ssh:
@@ -34,9 +34,9 @@ jenkins:
         remoteFS: "${JENKINS_AGENT_HOME}"
         nodeProperties:
           - diskSpaceMonitor:
-              freeDiskSpaceThreshold: "0"
+              freeDiskSpaceThreshold: "1GiB"
               freeDiskSpaceWarningThreshold: "2GiB"
-              freeTempSpaceThreshold: "0"
+              freeTempSpaceThreshold: "1GiB"
               freeTempSpaceWarningThreshold: "2GiB"
         launcher:
           ssh:
