@@ -7,4 +7,5 @@ docker run --name jenkins --rm --volume /var/jenkins_data -p 8080:8080 --env-fil
     -e JENKINS_CREDENTIAL_GITHUB_APP_USER_ANDREWJDAWES_SSH_KEY_PRIVATE="$(cat converted-github-app-user-andrewjdawes.pem)" \
     -e JENKINS_CREDENTIAL_GITHUB_APP_USER_MISSIEDAWES_SSH_KEY_PRIVATE="$(cat converted-github-app-user-missiedawes.pem)" \
     -e JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_CODEKAIZEN_SSH_KEY_PRIVATE="$(cat converted-github-app-organization-codekaizen.pem)" \
+    -e JENKINS_CREDENTIAL_APPLICATION_DEPLOYMENT_PREVIOUSLY_AUTHORIZED_SSH_KEY_PRIVATE="$(cat application-deployment-previously-authorized-private-key.pem)" \
     home-lab-jenkins:test
