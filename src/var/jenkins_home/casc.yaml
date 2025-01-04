@@ -120,6 +120,12 @@ credentials:
               id: "jenkins-github-ghcr-pat-token-andrewjdawes"
               scope: GLOBAL
               secret: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_GHCR_PAT_TOKEN_ANDREWJDAWES}"
+          # Same value as above, but username password format
+          - usernamePassword:
+              id: "jenkins-github-ghcr-pat-token-andrewjdawes-username-password"
+              scope: GLOBAL
+              username: "USERNAME"
+              password: "${JENKINS_CREDENTIAL_JENKINS_GITHUB_GHCR_PAT_TOKEN_ANDREWJDAWES}"
           - basicSSHUserPrivateKey:
               id: "application-deployment-previously-authorized-private-key"
               description: "Application Deployment Previously Authorized Private Key"
