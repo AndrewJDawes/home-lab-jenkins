@@ -6,11 +6,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/d
     https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-ce-cli
 RUN mkdir -p /var/jenkins_data
-RUN mkdir -p /var/jenkins_data/jobs
-RUN mkdir -p /var/jenkins_home
-RUN ln -s /var/jenkins_data/jobs /var/jenkins_home/jobs
 RUN chown -R jenkins:jenkins /var/jenkins_data
-RUN chown -R jenkins:jenkins /var/jenkins_home
 COPY src/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 USER jenkins
@@ -21,6 +17,7 @@ COPY src/usr/local/seed-job.groovy /usr/local/seed-job.groovy
 COPY src/var/jenkins_home/init.groovy.d/ /var/jenkins_home/init.groovy.d/
 COPY src/usr/share/jenkins/ref/plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY src/var/jenkins_home/casc.yaml /var/jenkins_home/casc.yaml
+RUN mkdir -p /var/jenkins_home/jobs
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 ENTRYPOINT ["/entrypoint.sh"]
 
