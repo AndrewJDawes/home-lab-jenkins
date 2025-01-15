@@ -150,15 +150,3 @@ credentials:
               id: "codekaizen-website-wordpress-wordpress-db-password"
               scope: GLOBAL
               secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_DB_PASSWORD}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-config-admin-user"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_CONFIG_ADMIN_USER}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-config-admin-email"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_CONFIG_ADMIN_EMAIL}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-config-admin-password"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_CONFIG_ADMIN_PASSWORD}"
