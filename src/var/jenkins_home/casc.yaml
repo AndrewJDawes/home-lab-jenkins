@@ -1,5 +1,4 @@
 # casc.yaml
-
 jenkins:
   numExecutors: 0
   nodes:
@@ -68,21 +67,41 @@ jenkins:
         env:
           - key: "JENKINS_SEED_JOB_REPO_URL"
             value: "${JENKINS_SEED_JOB_REPO_URL}"
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+aws:
+  awsCredentials:
+    credentialsId: s3-bucket-artifacts
+  s3:
+    customEndpoint: minio.codekaizen.net
+    container: jenkins
+    prefix: jobs/
+    disableSessionToken: true
+    useHttp: false
+    usePathStyleUrl: true
+    useTransferAcceleration: false
 unclassified:
   location:
     url: "${JENKINS_LOCATION_URL}"
   gitHubPluginConfig:
     hookSecretConfigs:
       - credentialsId: "jenkins-github-webhook-secret"
-security:
-  globalJobDslSecurityConfiguration:
-    useScriptSecurity: false
+  artifactManager:
+    artifactManagerFactories:
+      - jclouds:
+          provider: "s3"
 jobs:
   - file: /usr/local/seed-job.groovy
 credentials:
   system:
     domainCredentials:
       - credentials:
+          - aws:
+              id: s3-bucket-artifacts
+              scope: GLOBAL
+              accessKey: "${JENKINS_CREDENTIAL_AWS_S3_BUCKET_ARTIFACTS_ACCESS_KEY}"
+              secretKey: "${JENKINS_CREDENTIAL_AWS_S3_BUCKET_ARTIFACTS_SECRET_KEY}"
           - gitHubApp:
               id: "github-app-user-andrewjdawes"
               # apiUri: https://my-custom-github-enterprise.com/api/v3 # optional only required for GitHub enterprise
