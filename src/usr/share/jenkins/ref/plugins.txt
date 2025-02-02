@@ -7,6 +7,7 @@ basic-branch-build-strategies
 build-timeout
 cloudbees-folder
 configuration-as-code
+conjur-credentials
 credentials-binding
 docker-plugin
 docker-workflow

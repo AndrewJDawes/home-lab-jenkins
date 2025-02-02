@@ -91,6 +91,20 @@ unclassified:
     artifactManagerFactories:
       - jclouds:
           provider: "s3"
+  globalConjurConfiguration:
+    authWebServiceId: "jenkins"
+    conjurConfiguration:
+      account: "myorg"
+      applianceURL: "http://conjur"
+    enableContextAwareCredentialStore: true
+    enableIdentityFormatFieldsFromToken: true
+    enableJWKS: true
+    identityFormatFieldsFromToken: "jenkins_full_name"
+    jwtAudience: "cyberark-conjur"
+    keyLifetimeInMinutes: 60
+    selectIdentityFieldsSeparator: "-"
+    selectIdentityFormatToken: "jenkins_full_name"
+    tokenDurarionInSeconds: 120
 jobs:
   - file: /usr/local/seed-job.groovy
 credentials:
