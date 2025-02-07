@@ -92,15 +92,15 @@ unclassified:
       - jclouds:
           provider: "s3"
   globalConjurConfiguration:
-    authWebServiceId: "jenkins"
+    authWebServiceId: "${JENKINS_CONJUR_AUTH_WEB_SERVICE_ID}"
     conjurConfiguration:
-      account: "myorg"
-      applianceURL: "http://conjur"
+      account: "${JENKINS_CONJUR_ORG_ACCOUNT}"
+      applianceURL: "${JENKINS_CONJUR_APPLIANCE_URL}"
     enableContextAwareCredentialStore: true
     enableIdentityFormatFieldsFromToken: true
     enableJWKS: true
     identityFormatFieldsFromToken: "jenkins_full_name"
-    jwtAudience: "cyberark-conjur"
+    jwtAudience: "${JENKINS_CONJUR_JWT_AUDIENCE}"
     keyLifetimeInMinutes: 60
     selectIdentityFieldsSeparator: "-"
     selectIdentityFormatToken: "jenkins_full_name"

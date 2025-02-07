@@ -20,17 +20,11 @@ COPY src/var/jenkins_home/init.groovy.d/ /var/jenkins_home/init.groovy.d/
 COPY src/usr/share/jenkins/ref/plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY src/var/jenkins_home/casc.yaml /var/jenkins_home/casc.yaml
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
+ENV JENKINS_LOCATION_URL=http://localhost:8080
+ENV JENKINS_AGENT_HOME=/var/lib/jenkins
+ENV JENKINS_AWS_S3_CUSTOM_ENDPOINT=minio.codekaizen.net
+ENV JENKINS_CONJUR_APPLIANCE_URL=https://conjur.codekaizen.net
+ENV JENKINS_CONJUR_ORG_ACCOUNT=myorg
+ENV JENKINS_CONJUR_AUTH_WEB_SERVICE_ID=jenkins
+ENV JENKINS_CONJUR_JWT_AUDIENCE=cyberark-conjur
 ENTRYPOINT ["/entrypoint.sh"]
-
-
-# jenkins_workspaces_dir: "{{ jenkins_workspaces_base_dir }}/${ITEM_FULL_NAME}/workspace" # default is '${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}'
-# jenkins_builds_dir: "{{ jenkins_controller_builds_dir }}/${ITEM_FULL_NAME}" # default is '${ITEM_ROOTDIR}/builds'
-# - name: If Jenkins_builds_dir is defined, add -D option to jenkins_java_options
-#   set_fact:
-#     jenkins_java_options: "{{ jenkins_java_options }} -Djenkins.model.Jenkins.buildsDir='{{ jenkins_builds_dir }}'"
-#   when: jenkins_builds_dir is defined
-
-# - name: If Jenkins_workspaces_dir is defined, add -D option to jenkins_java_options
-#   set_fact:
-#     jenkins_java_options: "{{ jenkins_java_options }} -Djenkins.model.Jenkins.workspacesDir='{{ jenkins_workspaces_dir }}'"
-#   when: jenkins_workspaces_dir is defined
