@@ -12,7 +12,7 @@ RUN chown -R jenkins:jenkins /var/jenkins_home
 COPY src/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 USER jenkins
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Djenkins.model.Jenkins.workspacesDir='/var/jenkins_data/\${ITEM_FULL_NAME}/workspaces' -Djenkins.model.Jenkins.buildsDir='/var/jenkins_data/\${ITEM_FULL_NAME}/builds'"
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Djenkins.model.Jenkins.workspacesDir='/var/jenkins_data/\${ITEM_FULL_NAME}/workspaces' -Djenkins.model.Jenkins.buildsDir='/var/jenkins_data/\${ITEM_FULL_NAME}/builds' -Dio.jenkins.plugins.artifact_manager_jclouds.s3.S3BlobStoreConfig.deleteArtifacts=true -Dio.jenkins.plugins.artifact_manager_jclouds.s3.S3BlobStoreConfig.deleteStashes=true"
 ENV JENKINS_AGENTS_SSH_USERNAME=jenkins
 ENV CASC_JENKINS_CONFIG=/var/jenkins_home/casc.yaml
 COPY src/usr/local/seed-job.groovy /usr/local/seed-job.groovy
