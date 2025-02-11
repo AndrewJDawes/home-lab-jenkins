@@ -168,18 +168,6 @@ credentials:
               scope: GLOBAL
               username: "${JENKINS_CREDENTIAL_APPLICATION_DEPLOYMENT_PREVIOUSLY_AUTHORIZED_SSH_USERNAME}"
           - string:
-              id: "codekaizen-website-wordpress-mysql-root-password"
+              id: "jenkins-conjur-password"
               scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_MYSQL_ROOT_PASSWORD}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-db-name"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_DB_NAME}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-db-user"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_DB_USER}"
-          - string:
-              id: "codekaizen-website-wordpress-wordpress-db-password"
-              scope: GLOBAL
-              secret: "${JENKINS_CREDENTIAL_CODEKAIZEN_WEBSITE_WORDPRESS_WORDPRESS_DB_PASSWORD}"
+              secret: "${JENKINS_CREDENTIAL_JENKINS_CONJUR_PASSWORD}"
