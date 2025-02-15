@@ -137,6 +137,13 @@ credentials:
               description: "GitHub App for CodeKaizen Organization"
               # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
               privateKey: "${JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_CODEKAIZEN_SSH_KEY_PRIVATE}"
+          - gitHubApp:
+              id: "github-app-organization-umerx"
+              # apiUri: https://my-custom-github-enterprise.com/api/v3 # optional only required for GitHub enterprise
+              appID: "${JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_UMERX_APP_ID}"
+              description: "GitHub App for Umerx Organization"
+              # https://stackoverflow.com/questions/67494516/with-ansible-how-do-i-write-a-private-key-to-a-text-file-without-losing-the-lef
+              privateKey: "${JENKINS_CREDENTIAL_GITHUB_APP_ORGANIZATION_UMERX_SSH_KEY_PRIVATE}"
           - basicSSHUserPrivateKey:
               id: "jenkins-controller-to-agents-private-key"
               description: "Jenkins Controller to Agents Private Key"
