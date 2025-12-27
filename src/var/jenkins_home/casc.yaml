@@ -96,8 +96,10 @@ unclassified:
     conjurConfiguration:
       account: "${JENKINS_CONJUR_ORG_ACCOUNT}"
       applianceURL: "${JENKINS_CONJUR_APPLIANCE_URL}"
+    enableIdentityFormatFieldsFromToken: false
     identityFormatFieldsFromToken: "jenkins_full_name"
     keyLifetimeInMinutes: 60
+    selectAuthenticator: "JWT"
     selectIdentityFieldsSeparator: "-"
     selectIdentityFormatToken: "jenkins_full_name"
     tokenDurationInSeconds: 120
