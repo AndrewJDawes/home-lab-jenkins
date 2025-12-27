@@ -96,15 +96,11 @@ unclassified:
     conjurConfiguration:
       account: "${JENKINS_CONJUR_ORG_ACCOUNT}"
       applianceURL: "${JENKINS_CONJUR_APPLIANCE_URL}"
-    enableContextAwareCredentialStore: true
-    enableIdentityFormatFieldsFromToken: true
-    enableJWKS: true
     identityFormatFieldsFromToken: "jenkins_full_name"
-    jwtAudience: "${JENKINS_CONJUR_JWT_AUDIENCE}"
     keyLifetimeInMinutes: 60
     selectIdentityFieldsSeparator: "-"
     selectIdentityFormatToken: "jenkins_full_name"
-    tokenDurarionInSeconds: 120
+    tokenDurationInSeconds: 120
 jobs:
   - file: /usr/local/seed-job.groovy
 credentials:
