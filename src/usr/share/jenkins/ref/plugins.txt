@@ -29,8 +29,10 @@ commons-lang3-api:3.20.0-109.ve43756e2d2b_4
 commons-text-api:1.15.0-210.v7480a_da_70b_9e
 configuration-as-code:2006.v001a_2ca_6b_574
 conjur-credentials:3.0.6
+coverage:2.3060.v035a_5557cdb_c
 credentials:1453.v9b_a_29777a_b_fd
 credentials-binding:702.vfe613e537e88
+data-tables-api:2.3.5-1497.v38449eb_7d5a_1
 display-url-api:2.217.va_6b_de84cc74b_
 docker-commons:457.v0f62a_94f11a_3
 docker-java-api:3.7.0-133.v93b_8fb_c17a_77
@@ -43,6 +45,7 @@ email-ext:1933.v45cec755423f
 envinject:2.926.v69c9b_3896a_96
 envinject-api:1.236.v35fd4d7eb_515
 font-awesome-api:7.1.0-882.v1dfb_771e3278
+forensics-api:3.1772.v99ca_3d83b_9fa_
 git:5.8.1
 git-client:6.5.0
 github:1.45.0
